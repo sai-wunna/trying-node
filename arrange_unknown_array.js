@@ -1,17 +1,46 @@
-let dataone = [
-    { name : "Bob", age : 21, job : ""},
-    { name : "John", age : 24, job : "Developer"},
-    { name : "Sam", age : 25, job: "Designer"}
+//______________________example data one______________________________
+// let dataone = [
+//     { name : "Bob", age : 21, job : ""},
+//     { name : "John", age : 24, job : "Developer"},
+//     { name : "Sam", age : 25, job: "Designer"}
+// ];
+
+// let datatwo = [
+//     { name : "Bob", address : "South A"},
+//     { name : "Sam", address : "South B"},
+//     { name : "John", address : "South C"},
+//     { name : "Sow", address : "South D"}
+// ];
+
+//______________________example data two______________________________
+const dataone = [
+  { name: "Bob", age: 21, job: "" },
+  { name: "John", age: 24, job: "Developer" },
+  { name: "Sam", age: 25, job: "Designer" },
+  { name: "Alice", age: 30, job: "Engineer" },
+  { name: "Emily", age: 27, job: "Teacher" },
+  { name: "David", age: 35, job: "Manager" },
+  { name: "Sarah", age: 29, job: "Doctor" },
+  { name: "Tom", age: 32, job: "Salesperson" },
+  { name: "Olivia", age: 26, job: "Writer" },
+  { name: "Michael", age: 28, job: "Artist" }
 ];
 
-let datatwo = [
-    { name : "Bob", address : "South A"},
-    { name : "Sam", address : "South B"},
-    { name : "John", address : "South C"},
-    { name : "Sow", address : "South D"}
+const datatwo = [
+  { name: "Bob", address: "South A" , phone : '0923435'},
+  { name: "Sam", address: "South B" , phone : '0923435'},
+  { name: "John", address: "South C" , phone : '0923435'},
+  { name: "Michael", address: "South D" , phone : '0923435'},
+  { name: "Alice", address: "South E" , phone : '0923435'},
+  { name: "Emily", address: "South F" , phone : '0923435'},
+  { name: "David", address: "South G" , phone : '0923435'},
+  { name: "Sarah", address: "South H" , phone : '0923435'},
+  { name: "Tom", address: "South I" },
+  { name: "Olivia", address: "South J" }
 ];
 
-let howTo = [ "name", "age", "job", "address" ];// how to arange the result
+// how to arange the result
+let howTo = [ "name", "age", "phone", "job", "address" ];
 
 //_______________METHOD ONE___________________________//________By ME______
 function arrangeDataMethodOne(dataone, datatwo, howTo){
@@ -30,7 +59,8 @@ function arrangeDataMethodOne(dataone, datatwo, howTo){
     }
     return finalData;
 }
-console.log(arrangeDataMethodOne(dataone, datatwo, howTo));
+//______________try here______________
+// console.log(arrangeDataMethodOne(dataone, datatwo, howTo));
 
 
 //_______________METHOD TWO___________________________//___Provided by chat GPT______
@@ -63,5 +93,5 @@ function arrangeDataMethodTwo(dataone, datatwo, howToArr) {
   
     return finalData;
   }
-
-  console.log(arrangeDataMethodTwo(dataone, datatwo, howTo));
+// ______________try here________________
+//   console.log(arrangeDataMethodTwo(dataone, datatwo, howTo));

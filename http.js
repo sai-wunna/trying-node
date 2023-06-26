@@ -1,7 +1,5 @@
 const http = require('http');
 
-const http = require('http');
-
 const server = http.createServer((req, res) => {
     try {
         if (req.url === '/') {
@@ -21,10 +19,6 @@ const server = http.createServer((req, res) => {
         res.end('Internal Server Error');
     }
 });
-
-server.listen(5000);
-
-
 
 server.listen(7900, () => {
     console.log("The server is running at port 7900")
