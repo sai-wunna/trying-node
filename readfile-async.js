@@ -17,7 +17,7 @@ const getText = (path) => {
 //     .then((data) => console.log(data))
 //     .catch((err) => console.log(err));
 
-//_____________or saync/await for promises__________**two files per function**_____
+//_____________or saync/await for promises__________**several files per function**_____
 const startread = async (path) => {
     try{
         let data = [];
