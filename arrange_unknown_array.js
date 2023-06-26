@@ -14,7 +14,7 @@
 
 //______________________example data two______________________________
 const dataone = [
-  { name: "Bob", age: 21, job: "" },
+  { name: "Bob", age: 21 },
   { name: "John", age: 24, job: "Developer" },
   { name: "Sam", age: 25, job: "Designer" },
   { name: "Alice", age: 30, job: "Engineer" },
@@ -28,9 +28,9 @@ const dataone = [
 
 const datatwo = [
   { name: "Bob", address: "South A" , phone : '0923435'},
-  { name: "Sam", address: "South B" , phone : '0923435'},
+  { name: "Sam", address: "South B" },
   { name: "John", address: "South C" , phone : '0923435'},
-  { name: "Michael", address: "South D" , phone : '0923435'},
+  { name: "Michael" , phone : '0923435'},
   { name: "Alice", address: "South E" , phone : '0923435'},
   { name: "Emily", address: "South F" , phone : '0923435'},
   { name: "David", address: "South G" , phone : '0923435'},
@@ -43,6 +43,7 @@ const datatwo = [
 let howTo = [ "name", "age", "phone", "job", "address" ];
 
 //_______________METHOD ONE___________________________//________By ME______
+//__rules is must be arrays for all args(must give)__the third is how to arrange and it's first arg must be common key
 function arrangeDataMethodOne(dataone, datatwo, howTo){
     let finalData = [];
     let xKey = howTo[0];
@@ -84,6 +85,8 @@ function arrangeDataMethodTwo(dataone, datatwo, howToArr) {
             combinedUser[key] = userOne[key];
           } else if (userTwo.hasOwnProperty(key)) {
             combinedUser[key] = userTwo[key];
+          } else {
+            combinedUser[key] = "Not summited"; // can be modified what to be shown
           }
         }
   
@@ -94,4 +97,4 @@ function arrangeDataMethodTwo(dataone, datatwo, howToArr) {
     return finalData;
   }
 // ______________try here________________
-//   console.log(arrangeDataMethodTwo(dataone, datatwo, howTo));
+  console.log(arrangeDataMethodTwo(dataone, datatwo, howTo));
