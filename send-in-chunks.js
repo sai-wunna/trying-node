@@ -6,10 +6,12 @@ http.createServer( function (req, res) {
     const fileStream = fs.createReadStream('./textfolder/subfolder/bigtext.txt', 'utf8');
     fileStream.on('open', () => {
         //_____if we use normal res.end(data)__it make slower maybe______
-        //_____write and send data in chunks_______
+        //_____pipe() write and send data in chunks_______
         fileStream.pipe(res);
     })
     fileStream.on('error', (err) => {
         res.end(err);
     })
-}).listen(7900);
+}).listen(4000 , () => {
+    console.log("Server is running at port 4000.....")
+});
