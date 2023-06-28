@@ -1,5 +1,7 @@
 const http = require('http');
 
+//____a function that is nested in reponse make the reponse/reload slower___
+
 const server = http.createServer((req, res) => {
   if (req.url === '/') {
     res.end("This is our home page");

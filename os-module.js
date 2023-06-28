@@ -9,8 +9,8 @@ console.log(`the system is on for ${condition} seconds`);
 const currentOS = {
     type : os.type(),
     release : os.release(),
-    totalmem : os.totalmem(),
-    freemen : os.freemem()
+    totalmem : os.totalmem() / 1000000 + "MB",
+    freemen : os.freemem() / 1000000 + "MB"
 }
 
 console.log(currentOS);

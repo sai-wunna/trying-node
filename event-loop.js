@@ -1,7 +1,7 @@
 //__________Event Loop______________
 
 
-console.log("Befor callback function"); // it works first
+console.log("Before callback function"); // it works first
 
 setTimeout(() => {
     console.log("callback function done"); // it works last

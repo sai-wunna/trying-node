@@ -7,6 +7,7 @@ http.createServer( function (req, res) {
     fileStream.on('open', () => {
         //_____if we use normal res.end(data)__it make slower maybe______
         //_____pipe() write and send data in chunks_______
+        //___instead of res.end / use pipe(res) to reponse (send big file size data)__
         fileStream.pipe(res);
     })
     fileStream.on('error', (err) => {

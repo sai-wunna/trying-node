@@ -61,7 +61,7 @@ function arrangeDataMethodOne(dataone, datatwo, howTo){
     return finalData;
 }
 //______________try here______________
-// console.log(arrangeDataMethodOne(dataone, datatwo, howTo));
+console.log(arrangeDataMethodOne(dataone, datatwo, howTo));
 
 
 //_______________METHOD TWO___________________________//___Provided by chat GPT______
@@ -95,6 +95,6 @@ function arrangeDataMethodTwo(dataone, datatwo, howToArr) {
     }
   
     return finalData;
-  }
+}
 // ______________try here________________
-  console.log(arrangeDataMethodTwo(dataone, datatwo, howTo));
+// console.log(arrangeDataMethodTwo(dataone, datatwo, howTo));
