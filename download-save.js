@@ -21,7 +21,7 @@ https.get('https://jsonplaceholder.typicode.com/todos', res => {
             console.log(condition, result);
             writeFile('textfolder/subfolder/download-save.txt', result , () => {
                 console.log("saved.....")
-            })
+            })  
         })
         
         
