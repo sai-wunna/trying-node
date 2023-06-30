@@ -17,9 +17,9 @@ https.get('https://jsonplaceholder.typicode.com/todos', res => {
         readFile(data, () => {
             const file = JSON.parse(data);
             const condition = file.find( s => s.userId === 1 && s.completed === false);
-            const result = JSON.stringify(condition);// change to string so it can be saved in .txt
+            const result = JSON.stringify(condition);// change to json so it can be saved in .txt/.json
             console.log(condition, result);
-            writeFile('textfolder/subfolder/download-save.txt', result , () => {
+            writeFile('textfolder/subfolder/download-save.json', result , () => {
                 console.log("saved.....")
             })  
         })
