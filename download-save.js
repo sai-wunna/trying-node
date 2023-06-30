@@ -14,16 +14,17 @@ https.get('https://jsonplaceholder.typicode.com/todos', res => {
         //     console.log("Covid info file has been saved at textfolder/subfolder/download-test.js")
         // })
 
-        readFile(data, () => {
-            const file = JSON.parse(data);
-            const condition = file.find( s => s.userId === 1 && s.completed === false);
-            const result = JSON.stringify(condition);// change to json so it can be saved in .txt/.json
-            console.log(condition, result);
-            writeFile('textfolder/subfolder/download-save.json', result , () => {
+        if(data !== false){
+            readFile(data, () => {
+                const file = JSON.parse(data);
+                const condition = file.find( s => s.userId === 1 && s.completed === false);
+                const result = JSON.stringify(condition);// change to json so it can be saved in .txt/.json
+                console.log(condition, result);
+                writeFile('textfolder/subfolder/download-save.json', result , () => {
                 console.log("saved.....")
-            })  
-        })
-        
-        
+                })  
+            })
+        }
+        console.log("There is an error")
     })
 })
